@@ -1,0 +1,14 @@
+# Test profile configuration
+spring:
+  config:
+    activate:
+      on-profile: test
+
+logging:
+  level:
+    root: WARN
+    com.aichangeguard: DEBUG
+
+changeguard:
+  github:
+    webhook-secret: ${GITHUB_WEBHOOK_SECRET:changeguard-test-secret}

@@ -1,0 +1,54 @@
+package com.aichangeguard.impact.database.model;
+
+/**
+ * Categorization of database-related changes discovered across entities, migrations, and repositories.
+ */
+public enum DatabaseChangeType {
+    // Migration DDL changes
+    TABLE_CREATED,
+    TABLE_DROPPED,
+    TABLE_RENAMED,
+    COLUMN_ADDED,
+    COLUMN_DROPPED,
+    COLUMN_TYPE_CHANGED,
+    COLUMN_NULLABILITY_CHANGED,
+    PRIMARY_KEY_CHANGED,
+    UNIQUE_CONSTRAINT_ADDED,
+    UNIQUE_CONSTRAINT_REMOVED,
+    INDEX_ADDED,
+    INDEX_DROPPED,
+    FOREIGN_KEY_CHANGED,
+
+    // Destructive DML operations
+    DESTRUCTIVE_DML_OPERATION,
+
+    // Flyway Migration metadata & conflicts
+    NEW_MIGRATION_FILE,
+    MIGRATION_VERSION_CONFLICT,
+    MIGRATION_FILE_MODIFIED,
+    MIGRATION_OUT_OF_ORDER,
+    UNSUPPORTED_SQL_STATEMENT,
+
+    // JPA Entity changes (Inferred)
+    ENTITY_ADDED,
+    ENTITY_REMOVED,
+    ENTITY_TABLE_MAPPING_CHANGED,
+    ENTITY_COLUMN_ADDED,
+    ENTITY_COLUMN_REMOVED,
+    ENTITY_COLUMN_TYPE_CHANGED,
+    ENTITY_COLUMN_NULLABILITY_CHANGED,
+    ENTITY_PRIMARY_KEY_CHANGED,
+    ENTITY_RELATIONSHIP_CHANGED,
+
+    // Spring Data Repository changes
+    REPOSITORY_ADDED,
+    REPOSITORY_REMOVED,
+    REPOSITORY_METHOD_ADDED,
+    REPOSITORY_METHOD_REMOVED,
+    REPOSITORY_QUERY_CHANGED,
+    REPOSITORY_NATIVE_QUERY_FLAG_CHANGED,
+
+    // Schema / Entity divergence
+    ENTITY_MIGRATION_DIVERGENCE
+}
+

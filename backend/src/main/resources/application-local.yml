@@ -1,0 +1,11 @@
+# Local development environment profile
+spring:
+  config:
+    activate:
+      on-profile: local
+
+logging:
+  level:
+    root: INFO
+    com.aichangeguard: DEBUG
+    org.springframework.web: INFO
